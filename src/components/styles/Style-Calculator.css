@@ -1,0 +1,14 @@
+/* Globals */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top right, rgb(50, 50, 50) 0%, rgb(83, 83, 83)  100%);
+}
+
+/* Calculator */
