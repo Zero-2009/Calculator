@@ -1,4 +1,10 @@
 /* Globals */
+:root {
+    --Background_Light: rgb(239, 239, 239);
+    --Background_Dark: rgb(65, 65, 65);
+    --Color_Numbers: rgb(95, 95, 95);
+    --Color_ResultOperators: rgb(50, 117, 188);
+}
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -9,6 +15,56 @@ html {
 body {
     height: 100vh;
     background-image: linear-gradient(to top right, rgb(50, 50, 50) 0%, rgb(83, 83, 83)  100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* Calculator */
+/* Calculator Desing Background*/
+.Calculator-Background {
+    background-color: var(--Background_Light);
+    height: 60rem;
+    width: 35rem;
+    margin: 4rem;
+    border: none;
+    border-radius: 15px;
+}
+.Calculator-Span {
+    margin: 0px 10px 20px 10px;
+    padding-top: 80px;
+}
+.Calculator-Span__Numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 25px;
+    color: var(--Color_Numbers);
+}
+.Calculator-Span__Result {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 50px;
+    color: var(--Color_ResultOperators);
+}
+/* Style Buttons*/
+.Calculator-Buttons {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    padding: 10px;
+    gap: 10px;
+    background-color: red;
+}
+.Calculator-Buttons div {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: blue;
+}
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
