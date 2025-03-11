@@ -24,10 +24,9 @@ body {
     background-color: var(--Background_Light);
     height: 60rem;
     width: 30rem;
-    margin: auto;
-    padding: auto;
     border: none;
     border-radius: 15px;
+    margin: 20px 30px;
 }
 .Calculator-Span {
     margin: 0px 10px 20px 10px;
