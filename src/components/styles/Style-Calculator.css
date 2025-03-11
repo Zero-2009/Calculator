@@ -23,8 +23,9 @@ body {
 .Calculator-Background {
     background-color: var(--Background_Light);
     height: 60rem;
-    width: 35rem;
-    margin: 4rem;
+    width: 30rem;
+    margin: auto;
+    padding: auto;
     border: none;
     border-radius: 15px;
 }
