@@ -1,0 +1,23 @@
+/* Globals */
+:root {
+    --background: rgb(238, 204, 255);
+    --background_Calculator: rgb(249, 249, 249);
+    --background_buttons: rgb(236, 243, 243);
+}
+html {
+	box-sizing: border-box; /* Prevents sudden growth of the box */
+	font-size: 62.5%; /*1rem = 10px*/
+}
+body {
+    background-color: var(--background);
+}
+*, *:before, *:after {
+	box-sizing: inherit; /* Follow the same size rule in html*/
+}
+
+/* Calculator Desing */
+.Content-Calculator {
+    width: 80%;
+    height: 90%;
+    background-color: var(--background_Calculator);
+}
