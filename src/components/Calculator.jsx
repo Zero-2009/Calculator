@@ -1,11 +1,11 @@
 import "./css/index.css"
-import "./css/normalize.css"
+import "./css/normalize.css" 
 function Calculator () {
     return (
         <>
             <section className="Content-Calculator">
                 <section className="Calculator-Span">
-                    <span>‎</span>
+                    <span>‎0</span>
                 </section>
                 <section className="Calculator-Buttons">
                     <div className="Calculator_Inputs">
@@ -35,7 +35,7 @@ function Calculator () {
                     <div className="Calculator_Inputs">
                         <button>0</button>
                         <button>.</button>
-                        <button>=</button>
+                        <button className="Button-Equal">=</button>
                     </div>
                 </section>
             </section>
