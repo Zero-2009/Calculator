@@ -11,7 +11,7 @@ function Calculator () {
         let SpanView = document.getElementById("Span");
         NumberTemporary += digit;
         SpanView.innerText = NumberTemporary;
-    }
+    }   
     function GetOperator (e) {
         let operator = e.target.innerText;
         let SpanView = document.getElementById("Span");
@@ -21,7 +21,7 @@ function Calculator () {
         ArrayOperators.push(OperatorTemporary);
         NumberTemporary = "";
     }
-    function ShowResult (e) {
+    function ShowResult () {
         let SpanView = document.getElementById("Span");
         let ResultTemporary = ArrayNumbers[0];
         ArrayNumbers.push(Number(NumberTemporary));
@@ -40,9 +40,24 @@ function Calculator () {
             }
             SpanView.innerText = ResultTemporary;
         }
+        console.log(ArrayNumbers);
+        console.log(ArrayOperators);
         NumberTemporary = ResultTemporary;
         ArrayNumbers = [];
         ArrayOperators = [];
+    }
+    function ClearButton () {
+        let SpanView = document.getElementById("Span");
+        NumberTemporary = "";
+        OperatorTemporary = "";
+        ArrayNumbers = [];
+        ArrayOperators = [];
+        SpanView.innerText = 0;
+    }
+    function DeleteLast () {
+        let SpanView = document.getElementById("Span");
+        NumberTemporary = NumberTemporary.slice(0, -1);
+        SpanView.innerText = NumberTemporary || 0;
     }
     return (
         <>
@@ -52,8 +67,8 @@ function Calculator () {
                 </section>
                 <section className="Calculator-Buttons">
                     <div className="Calculator_Inputs">
-                        <button>clr</button>
-                        <button>DEL</button>
+                        <button onClick={ClearButton}>clr</button>
+                        <button onClick={DeleteLast}>DEL</button>
                         <button onClick={GetOperator}>%</button>
                         <button onClick={GetOperator}>/</button>
                     </div>
@@ -77,7 +92,7 @@ function Calculator () {
                     </div>
                     <div className="Calculator_Inputs">
                         <button onClick={GetNumber}>0</button>
-                        <button onClick={GetOperator}>.</button>
+                        <button onClick={GetNumber}>.</button>
                         <button onClick={ShowResult} className="Button-Equal">=</button>
                     </div>
                 </section>
